@@ -1,0 +1,195 @@
+/**
+ * Created by Administrator on 2016/11/24.
+ */
+html {
+  min-height: 100%;
+  position: relative;
+  background-color: #fff;
+}
+body {
+  padding-bottom: 0;
+  min-height: 100%;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  color: #393939;
+  line-height: 1.5;
+  font-family: "微软雅黑";
+}
+.bihu-time-axis:before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 0;
+  height: 100%;
+  border: 1px solid #ddd;
+  left: 120px;
+}
+.bihu-time-axis .axis-content {
+  min-height: 40px;
+  line-height: 40px;
+}
+.bihu-time-axis .axis-content:first-of-type {
+  margin-top: 25px;
+}
+.bihu-time-axis .axis-content:last-of-type {
+  margin-bottom: 25px;
+}
+.bihu-time-axis .axis-content .axis-time {
+  width: 120px;
+  text-align: right;
+  padding-right: 30px;
+}
+.bihu-time-axis .axis-content .axis-time:after {
+  content: "";
+  display: inline-block;
+  float: right;
+  margin-top: 13px;
+  margin-right: -22px;
+  width: 13px;
+  height: 13px;
+  border-radius: 100%;
+  border: 1px solid #ddd;
+  background-color: #FFFFFF;
+}
+.bihu-time-axis .axis-content .axis-time-item {
+  width: 120px;
+  text-align: right;
+  padding-right: 42px;
+  float: left;
+}
+.bihu-time-axis .axis-content .axis-time-item:after {
+  content: "";
+  display: inline-block;
+  margin-top: 13px;
+  margin-right: -33px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  border: 1px solid #ddd;
+  background-color: #ddd;
+}
+.bihu-time-axis .axis-content .axis-item-content {
+  margin-left: 120px;
+}
+.bihu-time-axis .axis-content .axis-item-content .axis-btn-bihu {
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.bihu-time-axis .axis-content .axis-item-content .axis-btn-bihu.btn-bihu-primary {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+.bihu-time-axis .axis-content .axis-item-content p {
+  line-height: 30px;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('Content/font/iconfont.eot');
+  /* IE9*/
+  src: url('Content/font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('Content/font/iconfont.woff') format('woff'), /* chrome、firefox */ url('Content/font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('Content/font/iconfont.svg#iconfont') format('svg');
+  /* iOS 4.1- */
+}
+.iconfontBihuClose {
+  font-family: "iconfont";
+  font-size: 22px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.huiFangNotice {
+  position: fixed;
+  width: 335px;
+  height: 100px;
+  border: 1px solid #dddddd;
+  display: block;
+  bottom: 30px;
+  right: 40px;
+  top: inherit;
+  left: inherit;
+  box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.2);
+}
+.huiFangNotice.activeOut {
+  animation: spaceOutUp ease-in 1s forwards;
+  -webkit-animation: spaceOutUp ease-in 1s forwards;
+  -moz-animation: spaceOutUp ease-in 1s forwards;
+  -o-animation: spaceOutUp ease-in 1s forwards;
+  -ms-animation: spaceOutUp ease-in 1s forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+}
+.huiFangNotice.activeIn {
+  animation: spaceInUp ease-in 1s forwards;
+  -webkit-animation: spaceOutUp ease-in 1s forwards;
+  -moz-animation: spaceOutUp ease-in 1s forwards;
+  -ms-animation: spaceOutUp ease-in 1s forwards;
+  -o-animation: spaceOutUp ease-in 1s forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+}
+.huiFangNotice .huiFangNotice-header {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+}
+.huiFangNotice .huiFangNotice-header span {
+  display: inline-block;
+  padding: 3px 6px;
+}
+.huiFangNotice .huiFangNotice-header span:first-of-type {
+  padding-left: 15px;
+}
+.huiFangNotice .huiFangNotice-header span:last-of-type {
+  float: right;
+  cursor: pointer;
+}
+.huiFangNotice .huiFangNotice-content {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+}
+.huiFangNotice .huiFangNotice-content span {
+  display: inline-block;
+}
+.huiFangNotice .huiFangNotice-content span:first-of-type {
+  padding-left: 15px;
+}
+.huiFangNotice .huiFangNotice-content span:last-of-type {
+  float: right;
+  cursor: pointer;
+}
+.huiFangNotice .huiFangNotice-content span:last-of-type a {
+  color: #428bca;
+  text-decoration: none;
+}
+.huiFangNotice .huiFangNotice-content span:last-of-type a:hover,
+.huiFangNotice .huiFangNotice-content span:last-of-type a:focus {
+  color: #428bca;
+  text-decoration: none;
+}
