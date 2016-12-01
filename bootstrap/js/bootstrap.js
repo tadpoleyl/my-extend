@@ -967,7 +967,8 @@ if (typeof jQuery === 'undefined') {
     this.$element.on('click.dismiss.bs.modal', '[data-dismiss="modal"]', $.proxy(this.hide, this))
 
     this.backdrop(function () {
-      var transition = $.support.transition && that.$element.hasClass('fade')
+      //llj
+      var transition = $.support.transition; //&& that.$element.hasClass('fade');
 
       if (!that.$element.parent().length) {
         that.$element.appendTo(that.$body) // don't move modals dom position
@@ -981,7 +982,12 @@ if (typeof jQuery === 'undefined') {
         that.$element[0].offsetWidth // force reflow
       }
 
+      //llj
+      var dataEaseIn=that.$element.attr("data-easein") || "fadeInDown";
+      var dataEaseOut=that.$element.attr("data-easeout") || "fadeOutDown";
+
       that.$element
+          .removeClass(dataEaseIn+" "+dataEaseOut).addClass(dataEaseIn)
         .addClass('in')
         .attr('aria-hidden', false)
 
@@ -995,7 +1001,7 @@ if (typeof jQuery === 'undefined') {
             that.$element.trigger('focus').trigger(e)
           })
           .emulateTransitionEnd(Modal.TRANSITION_DURATION) :
-        that.$element.trigger('focus').trigger(e)
+        that.$element.trigger('focus').trigger(e);
     })
   }
 
@@ -1013,17 +1019,25 @@ if (typeof jQuery === 'undefined') {
     this.escape()
 
     $(document).off('focusin.bs.modal')
+    var dataEaseIn=this.$element.attr("data-easein") || "fade";
+    var dataEaseOut=this.$element.attr("data-easeout");
 
     this.$element
+        .removeClass(dataEaseIn+" "+dataEaseOut).addClass(dataEaseOut)
       .removeClass('in')
       .attr('aria-hidden', true)
-      .off('click.dismiss.bs.modal')
+      .off('click.dismiss.bs.modal');
 
-    $.support.transition && this.$element.hasClass('fade') ?
-      this.$element
-        .one('bsTransitionEnd', $.proxy(this.hideModal, this))
-        .emulateTransitionEnd(Modal.TRANSITION_DURATION) :
-      this.hideModal()
+    $.support.transition ?
+        this.$element
+            .one('bsTransitionEnd', $.proxy(this.hideModal, this))
+            .emulateTransitionEnd(Modal.TRANSITION_DURATION) :
+        this.hideModal();
+    // $.support.transition && this.$element.hasClass('fade') ?
+    //   this.$element
+    //     .one('bsTransitionEnd', $.proxy(this.hideModal, this))
+    //     .emulateTransitionEnd(Modal.TRANSITION_DURATION) :
+    //   this.hideModal()
   }
 
   Modal.prototype.enforceFocus = function () {

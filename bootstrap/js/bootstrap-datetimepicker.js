@@ -131,6 +131,8 @@
     }
     this.icontype = this.fontAwesome ? 'fa' : 'glyphicon';
 
+    this.slot=options.slot || false;
+
     this._attachEvents();
 
     this.clickedOutside = function (e) {
@@ -227,13 +229,25 @@
     while (template.indexOf('{rightArrow}') !== -1) {
       template = template.replace('{rightArrow}', this.icons.rightArrow);
     }
-    this.picker = $(template)
-      .appendTo(this.isInline ? this.element : this.container) // 'body')
-      .on({
-        click:     $.proxy(this.click, this),
-        mousedown: $.proxy(this.mousedown, this)
-      });
-
+    //llj
+    if(this.slot) {
+      template = DPGlobal.templateSlot;
+      var template= $(template)
+          .appendTo(this.isInline ? this.element : this.container) // 'body')
+          .on({
+            click: $.proxy(this.click, this),
+            mousedown: $.proxy(this.mousedown, this)
+          });
+      this.picker =$(".datetimepicker",template);
+    }
+    else {
+      this.picker = $(template)
+          .appendTo(this.isInline ? this.element : this.container) // 'body')
+          .on({
+            click: $.proxy(this.click, this),
+            mousedown: $.proxy(this.mousedown, this)
+          });
+    }
     //扩展 by llj
     if(this.isHideThead) {
       $(".datetimepicker .table-condensed").find("thead").hide();
@@ -376,7 +390,11 @@
       $(".datetimepicker").hide();
       this.picker.show();
       this.height = this.component ? this.component.outerHeight() : this.element.outerHeight();
+
       if (this.forceParse) {
+        this.update();
+      }
+      if(this.initialDate != this.element.val()){
         this.update();
       }
       this.place();
@@ -491,6 +509,8 @@
       if (this.linkField) {
         $('#' + this.linkField).val(this.getFormattedDate(this.linkFormat));
       }
+      this.initialDate = formatted;
+      //this.element.focus();
     },
 
     getFormattedDate: function (format) {
@@ -1909,6 +1929,83 @@
     '</table>' +
     '</div>' +
     '</div>';
+
+  DPGlobal.templateSlot ='<article class="slot">'+ '<div class="datetimepicker">'+
+      '<div class="datetimepicker-minutes">' +
+      '<table class=" table-condensed">' +
+      DPGlobal.headTemplate +
+      DPGlobal.contTemplate +
+      DPGlobal.footTemplate +
+      '</table>' +
+      '</div>' +
+      '<div class="datetimepicker-hours">' +
+      '<table class=" table-condensed">' +
+      DPGlobal.headTemplate +
+      DPGlobal.contTemplate +
+      DPGlobal.footTemplate +
+      '</table>' +
+      '</div>' +
+      '<div class="datetimepicker-days">' +
+      '<table class=" table-condensed">' +
+      DPGlobal.headTemplate +
+      '<tbody></tbody>' +
+      DPGlobal.footTemplate +
+      '</table>' +
+      '</div>' +
+      '<div class="datetimepicker-months">' +
+      '<table class="table-condensed">' +
+      DPGlobal.headTemplate +
+      DPGlobal.contTemplate +
+      DPGlobal.footTemplate +
+      '</table>' +
+      '</div>' +
+      '<div class="datetimepicker-years">' +
+      '<table class="table-condensed">' +
+      DPGlobal.headTemplate +
+      DPGlobal.contTemplate +
+      DPGlobal.footTemplate +
+      '</table>' +
+      '</div>' +
+      '</div>'+
+      '<div class="datetimepicker">'+
+      '<div class="datetimepicker-minutes">' +
+      '<table class=" table-condensed">' +
+      DPGlobal.headTemplate +
+      DPGlobal.contTemplate +
+      DPGlobal.footTemplate +
+      '</table>' +
+      '</div>' +
+      '<div class="datetimepicker-hours">' +
+      '<table class=" table-condensed">' +
+      DPGlobal.headTemplate +
+      DPGlobal.contTemplate +
+      DPGlobal.footTemplate +
+      '</table>' +
+      '</div>' +
+      '<div class="datetimepicker-days">' +
+      '<table class=" table-condensed">' +
+      DPGlobal.headTemplate +
+      '<tbody></tbody>' +
+      DPGlobal.footTemplate +
+      '</table>' +
+      '</div>' +
+      '<div class="datetimepicker-months">' +
+      '<table class="table-condensed">' +
+      DPGlobal.headTemplate +
+      DPGlobal.contTemplate +
+      DPGlobal.footTemplate +
+      '</table>' +
+      '</div>' +
+      '<div class="datetimepicker-years">' +
+      '<table class="table-condensed">' +
+      DPGlobal.headTemplate +
+      DPGlobal.contTemplate +
+      DPGlobal.footTemplate +
+      '</table>' +
+      '</div>' +
+      '</div>'
+      '</div>';
+
   $.fn.datetimepicker.DPGlobal = DPGlobal;
 
   /* DATETIMEPICKER NO CONFLICT
