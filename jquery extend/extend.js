@@ -1,7 +1,7 @@
-﻿(function ($,document) {
-    $(document).on("click",function(event){
-        var modalLeft=$("#myModal-left");
-        if(modalLeft.length>0 && $(event.target).parents(".modal-left").length<=0 && !$(event.target).hasClass("alert_bihu") && $(event.target).parents(".ycf-alert").length<=0  && $(event.target).attr("id")!="ycf-alert" && $(event.target).attr("id")!="ycf-confirm") {
+﻿(function ($, document) {
+    $(document).on("click", function (event) {
+        var modalLeft = $("#myModal-left");
+        if (modalLeft.length > 0 && $(event.target).parents(".modal-left").length <= 0 && !$(event.target).hasClass("alert_bihu") && $(event.target).parents(".ycf-alert").length <= 0 && $(event.target).attr("id") != "ycf-alert" && $(event.target).attr("id") != "ycf-confirm") {
             modalLeft.modal("hide");
             modalLeft.removeAttr("trIndex");
             $(".tr-bihu-active").removeClass("tr-bihu-active");
@@ -26,108 +26,108 @@
         },
         animate_tad: [
             {
-                animateName1:"fadeInLeft",
-                animateName2:"fadeOutLeft"
+                animateName1: "fadeInLeft",
+                animateName2: "fadeOutLeft"
             },
             {
-                animateName1:"fadeInRight",
-                animateName2:"fadeOutRight"
+                animateName1: "fadeInRight",
+                animateName2: "fadeOutRight"
             },
             {
-                animateName1:"fadeInUp",
-                animateName2:"fadeOutUp"
+                animateName1: "fadeInUp",
+                animateName2: "fadeOutUp"
             },
             {
-                animateName1:"fadeInDown",
-                animateName2:"fadeOutDown"
+                animateName1: "fadeInDown",
+                animateName2: "fadeOutDown"
             },
             {
-                animateName1:"fadeInLeftBig",
-                animateName2:"fadeOutLeftBig"
+                animateName1: "fadeInLeftBig",
+                animateName2: "fadeOutLeftBig"
             },
             {
-                animateName1:"fadeInRightBig",
-                animateName2:"fadeOutRightBig"
+                animateName1: "fadeInRightBig",
+                animateName2: "fadeOutRightBig"
             },
             {
-                animateName1:"fadeInUpBig",
-                animateName2:"fadeOutUpBig"
+                animateName1: "fadeInUpBig",
+                animateName2: "fadeOutUpBig"
             },
             {
-                animateName1:"fadeInDownBig",
-                animateName2:"fadeOutDownBig"
+                animateName1: "fadeInDownBig",
+                animateName2: "fadeOutDownBig"
             },
             {
-                animateName1:"bounceInLeft",
-                animateName2:"bounceOutLeft"
+                animateName1: "bounceInLeft",
+                animateName2: "bounceOutLeft"
             },
             {
-                animateName1:"bounceInRight",
-                animateName2:"bounceOutRight"
+                animateName1: "bounceInRight",
+                animateName2: "bounceOutRight"
             },
             {
-                animateName1:"bounceInUp",
-                animateName2:"bounceOutUp"
+                animateName1: "bounceInUp",
+                animateName2: "bounceOutUp"
             },
             {
-                animateName1:"bounceInDown",
-                animateName2:"bounceOutDown"
+                animateName1: "bounceInDown",
+                animateName2: "bounceOutDown"
             },
             {
-                animateName1:"bounceIn",
-                animateName2:"bounceOut"
+                animateName1: "bounceIn",
+                animateName2: "bounceOut"
             },
             {
-                animateName1:"rotateInDownLeft",
-                animateName2:"rotateOutDownLeft"
+                animateName1: "rotateInDownLeft",
+                animateName2: "rotateOutDownLeft"
             },
             {
-                animateName1:"rotateInDownRight",
-                animateName2:"rotateOutDownRight"
+                animateName1: "rotateInDownRight",
+                animateName2: "rotateOutDownRight"
             },
             {
-                animateName1:"rotateInUpLeft",
-                animateName2:"rotateOutUpLeft"
+                animateName1: "rotateInUpLeft",
+                animateName2: "rotateOutUpLeft"
             },
             {
-                animateName1:"rotateInUpRight",
-                animateName2:"rotateOutUpRight"
+                animateName1: "rotateInUpRight",
+                animateName2: "rotateOutUpRight"
             },
             {
-                animateName1:"lightSpeedIn",
-                animateName2:"lightSpeedOut"
+                animateName1: "lightSpeedIn",
+                animateName2: "lightSpeedOut"
             },
             {
-                animateName1:"wobble",
-                animateName2:"lightSpeedOut"
+                animateName1: "wobble",
+                animateName2: "lightSpeedOut"
             },
             {
-                animateName1:"rollIn",
-                animateName2:"rollOut"
+                animateName1: "rollIn",
+                animateName2: "rollOut"
             },
             {
-                animateName1:"bounce",
-                animateName2:"rollOut"
+                animateName1: "bounce",
+                animateName2: "rollOut"
             },
             {
-                animateName1:"shake",
-                animateName2:"rollOut"
+                animateName1: "shake",
+                animateName2: "rollOut"
             },
             {
-                animateName1:"tada",
-                animateName2:"rollOut"
+                animateName1: "tada",
+                animateName2: "rollOut"
             },
             {
-                animateName1:"swing",
-                animateName2:"rollOut"
+                animateName1: "swing",
+                animateName2: "rollOut"
             },
             {
-                animateName1:"rubberBand",
-                animateName2:"rollOut"
+                animateName1: "rubberBand",
+                animateName2: "rollOut"
             },
             {
-                animateName1:"pulse",
-                animateName2:"rollOut"
+                animateName1: "pulse",
+                animateName2: "rollOut"
             }
         ],
         showDialog: function (obj) {
@@ -151,7 +151,7 @@
             </div>\
             <div class="modal-body">\
                 <div class="container-fluid">\
-                <form id="modal-form-bihu-showdialog" class="form-inline" role="form"></form>\
+                <form id="modal-form-bihu-showdialog" class="form-inline" role="form" onkeydown="if(event.keyCode==13){return false}" ></form>\
                 </div>\
                 </div>\
                 <div class="modal-footer" id="modal-footer-bihu-showdialog">\
@@ -197,13 +197,13 @@
                     that.setButtons();
                     obj.init();//初始化
                 },
-                setAnimate:function(){
-                    if(obj.animateIndex!=3 && obj.animateIndex>=0 && obj.animateIndex<=$.animate_tad.length-1) {
+                setAnimate: function () {
+                    if (obj.animateIndex != 3 && obj.animateIndex >= 0 && obj.animateIndex <= $.animate_tad.length - 1) {
                         data.myModal.attr("data-easein", $.animate_tad[obj.animateIndex].animateName1);
                         data.myModal.attr("data-easeout", $.animate_tad[obj.animateIndex].animateName2);
                     }
                 },
-                setButtons:function() {
+                setButtons: function () {
                     for (var btn in obj.buttons) {
                         var b = '<button type="button" id="' + btn + '" class="btn btn-primary"  autocomplete="off" data-loading-text="' + btn + '">' + btn + '</button>';
                         data.modalFooter.append(b);
@@ -214,7 +214,7 @@
                         });
                     }
                 },
-                setTop:function() {
+                setTop: function () {
                     if (obj.height == "auto") {
                         obj.height = data.modalBody.height();
                     }
@@ -247,7 +247,7 @@
             initData.setAnimate();
             initData.init();
         },
-        showDialogLeft:function(obj){
+        showDialogLeft: function (obj) {
             var defaults = {
                 init: function () {
                 },//初始化
@@ -266,7 +266,7 @@
                 </div>\
                 <div id="modal-body-bihu" class="modal-body">\
                 <div class="container container-fluid">\
-                <form id="bihu-tool-modal" class="form-inline" role = "form">\
+                <form id="bihu-tool-modal" class="form-inline" role = "form" onkeydown="if(event.keyCode==13){return false}" >\
                 </form>\
                 </div>\
                 </div>\
@@ -303,16 +303,16 @@
                     }
                     obj.content && (data.form.html(obj.content));
                     obj.headerTitle && (data.title.html(obj.headerTitle));
-                    data.myModal.css("width", obj.width + "%");
+                    data.myModal.css("width", obj.width + "%").css("padding-right", "0px");
                     that.setData();
                     that.setDateTime();
                     obj.init.bind(data.myModal)(data.form);//初始化
                     that.setBindClick();
                 },
-                setData:function() {
+                setData: function () {
                     data.bihu_datatime = $("#myModal-left .bihu-datatime");
                 },
-                setDateTime:function(){
+                setDateTime: function () {
                     if (data.bihu_datatime.length > 0) {
                         data.bihu_datatime.datetimepicker({
                             language: 'zh-CN',
@@ -325,19 +325,19 @@
                         });
                     }
                 },
-                clear:function () {
+                clear: function () {
                     data.myModal.modal("hide");
                     data.myModal.removeAttr("trIndex");
                     $(".tr-bihu-active").removeClass("tr-bihu-active");
                 },
-                setBindClick:function(){
-                    var that=this;
-                    data.chevronRight.off("click").on("click",function(e){
+                setBindClick: function () {
+                    var that = this;
+                    data.chevronRight.off("click").on("click", function (e) {
                         e.stopPropagation();
-                       that.clear();
+                        that.clear();
                         return !1;
                     });
-                    data.close.off("click").on("click",function(e){
+                    data.close.off("click").on("click", function (e) {
                         e.stopPropagation();
                         that.clear();
                         return !1;
@@ -355,32 +355,32 @@
             initData.init();
             return data.myModal;
         },
-        getQueryString:function(name) {
+        getQueryString: function (name) {
             var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
             var r = window.location.search.substr(1).match(reg);
             if (r != null) return unescape(r[2]);
             return null;
         },
-        startLoading:function(content){
-            if(content) {
+        startLoading: function (content) {
+            if (content) {
                 $("#waitContent").text(content);
             }
             $("#myModal-loading").modal({
-                show:true,
-                backdrop:false
+                show: true,
+                backdrop: false
             });
         },
-        endLoading:function() {
+        endLoading: function () {
             $("#myModal-loading").modal("hide");
-            setTimeout(function(){
+            setTimeout(function () {
                 $("#waitContent").text("正在获取，请稍等...");
-            },1000);
+            }, 1000);
         },
-        alert:function(options) {
+        alert: function (options) {
             var reg = new RegExp("\\[([^\\[\\]]*?)\\]", 'igm');
             var alr = $("#ycf-alert");
             if (alr.length <= 0) {
-                var html = '<div id="ycf-alert" class="modal ycf-alert" data-easein="fadeInDown" data-easeout="fadeOutDown" style="z-index: 999991;">\
+                var html = '<div id="ycf-alert" class="modal ycf-alert animated" data-easein="fadeInDown" data-easeout="fadeOutDown" tabindex="-1" role="dialog"  aria-hidden="true" style="z-index: 999991;">\
                     <div class="modal-dialog modal-sm">\
                     <div class="modal-content">\
                     <div class="modal-header">\
@@ -425,10 +425,10 @@
                     title: "提示",
                     btnok: "确定"
                 };
-                if(typeof options=="string") {
-                    ops.msg=options;
+                if (typeof options == "string") {
+                    ops.msg = options;
                 }
-                else{
+                else {
                     $.extend(ops, options);
                 }
                 var html = alr.html().replace(reg, function (node, key) {
@@ -447,11 +447,11 @@
             };
             return _alert(options);
         },
-        confirm:function(options) {
+        confirm: function (options) {
             var reg = new RegExp("\\[([^\\[\\]]*?)\\]", 'igm');
             var alr = $("#ycf-confirm");
             if (alr.length <= 0) {
-                var html = '<div id="ycf-confirm" class="modal ycf-alert" data-easein="fadeInDown" data-easeout="fadeOutDown" style="z-index: 999991;">\
+                var html = '<div id="ycf-confirm" class="modal ycf-alert animated" data-easein="fadeInDown" data-easeout="fadeOutDown" tabindex="-1" role="dialog"  aria-hidden="true" style="z-index: 999991;">\
                     <div class="modal-dialog modal-sm">\
                     <div class="modal-content">\
                     <div class="modal-header" style="border-bottom:none;">\
@@ -475,7 +475,7 @@
 
             var _confirm = function (options) {
                 alr.html(ahtml); // 复原
-                 alr.find('.ok').removeClass('btn-success').addClass('btn-primary');
+                alr.find('.ok').removeClass('btn-success').addClass('btn-primary');
                 alr.find('.cancel').hide();
                 _dialog(options);
                 return {
@@ -496,13 +496,13 @@
                     msg: "提示内容",
                     title: "",
                     btnok: "确定",
-                    btncancel:"取消",
-                    width:300
+                    btncancel: "取消",
+                    width: 300
                 };
-                if(typeof options=="string") {
-                    ops.msg=options;
+                if (typeof options == "string") {
+                    ops.msg = options;
                 }
-                else{
+                else {
                     $.extend(ops, options);
                 }
                 var html = alr.html().replace(reg, function (node, key) {
@@ -510,12 +510,12 @@
                         Title: ops.title,
                         Message: ops.msg,
                         BtnOk: ops.btnok,
-                        BtnCancel:ops.btncancel
+                        BtnCancel: ops.btncancel
                     }[key];
                 });
                 alr.html(html);
                 $("#msg_bihu_confirm").html(ops.msg);
-                $(".modal-content",alr).width(ops.width);
+                $(".modal-content", alr).width(ops.width);
                 alr.modal({
                     width: 500,
                     backdrop: false
@@ -523,18 +523,20 @@
             };
             return _confirm(options);
         },
-        checkEndTime:function(startTime,endTime){
-            var start=new Date(startTime.replace("-", "/").replace("-", "/"));
-            var end=new Date(endTime.replace("-", "/").replace("-", "/"));
-            if(end<start) {
+        checkEndTime: function (startTime, endTime) {
+            var start = new Date(startTime.replace("-", "/").replace("-", "/"));
+            var end = new Date(endTime.replace("-", "/").replace("-", "/"));
+            if (end < start) {
                 return false;
             }
             return true;
         },
-        setBihuTime:function(pickerPosition){
+        setBihuTime: function (pickerPosition) {
             var data = {
-                bihu_datatime:$("#myModal").find(".bihu-datatime"),
-                bihu_datatimeDay:$("#myModal").find(".bihu-datatime-day")
+                bihu_datatime: $("#myModal").find(".bihu-datatime"),
+                bihu_datatimeDay: $("#myModal").find(".bihu-datatime-day"),
+                bihu_datatimeHour: $("#myModal").find(".bihu-datatiem-hour"),
+                bihu_datatimeSlot: $("#myModal").find(".bihu-datatime-slot")
             };
             if (data.bihu_datatime.length > 0) {
                 data.bihu_datatime.datetimepicker({
@@ -545,20 +547,20 @@
                     forceParse: false,
                     todayBtn: 1,
                     clearBtn: 1,
-                    pickerPosition:pickerPosition || "bottom-left"
+                    pickerPosition: pickerPosition || "bottom-left"
                 }).on("changeDate", function (e) {
-                    var _this=$(this);
-                    var type=_this.attr("bihu-type");
-                    var id=_this.attr("bihu-id");
-                    if(type=="start") {
-                        $("#"+id).datetimepicker("setStartDate", _this.val());
+                    var _this = $(this);
+                    var type = _this.attr("bihu-type");
+                    var id = _this.attr("bihu-id");
+                    if (type == "start") {
+                        $("#" + id).datetimepicker("setStartDate", _this.val());
                     }
-                    else if(type=="end"){
-                        $("#"+id).datetimepicker("setEndDate",  _this.val());
+                    else if (type == "end") {
+                        $("#" + id).datetimepicker("setEndDate", _this.val());
                     }
-                }).on("hide",function(e){
-                    var _this=$(this);
-                    if(!$.trim(_this.val())) {
+                }).on("hide", function (e) {
+                    var _this = $(this);
+                    if (!$.trim(_this.val())) {
                         var type = _this.attr("bihu-type");
                         var id = _this.attr("bihu-id");
                         if (type == "start") {
@@ -582,10 +584,48 @@
                     clearBtn: 1
                 });
             }
+            if (data.bihu_datatimeHour.length > 0) {
+                data.bihu_datatimeHour.datetimepicker({
+                    language: 'zh-CN',
+                    weekStart: 1,
+                    autoclose: true,
+                    forceParse: false,
+                    todayBtn: 1,
+                    clearBtn: 1,
+                    minView: 1,
+                    format: "yyyy-mm-dd hh:00"
+                });
+            }
+            if (data.bihu_datatimeSlot.length > 0) {
+                data.bihu_datatimeSlot.daterangepicker({
+                    applyClass: 'btn-sm btn-primary',
+                    cancelClass: 'btn-sm btn-default',
+                    clearClass: 'btn-sm btn-danger',
+                    locale: {
+                        applyLabel: '确认',
+                        cancelLabel: '取消',
+                        clearLabel: '清除',
+                        fromLabel: '起始时间',
+                        toLabel: '结束时间',
+                        customRangeLabel: '自定义',
+                        firstDay: 1
+                    },
+                    opens: 'right',    // 日期选择框的弹出位置
+                    separator: ' 至 ',
+                    showWeekNumbers: true,     // 是否显示第几周
+                    format: 'YYYY-MM-DD',
+                    isShowLabel: false
+                }, function (start, end, label) { // 格式化日期显示框
+                    $('#beginTime').val(start.format('YYYY-MM-DD'));
+                    $('#endTime').val(end.format('YYYY-MM-DD'));
+                }).next().on('click', function () {
+                    $(this).prev().focus();
+                });
+            }
         }
     });
     $.fn.extend({
-        tools:function(obj) {
+        tools: function (obj) {
             var defaults = {
                 init: function () {
                 },
@@ -604,9 +644,9 @@
             obj.content = "";
             obj.modal = "";
             var that = this;
-            var tr=that.find("tbody tr");
-            if(obj.td.length>0) {
-                for(var j=0;j<tr.length;j++) {
+            var tr = that.find("tbody tr");
+            if (obj.td.length > 0) {
+                for (var j = 0; j < tr.length; j++) {
                     for (var i = 0; i < obj.td.length; i++) {
                         $(tr[j]).find("td").eq(obj.td[i]).css("color", "#3a72af");
                     }
@@ -624,10 +664,10 @@
                         obj.modal.removeAttr("trIndex");
                     }
                 }
-                else{
-                    obj.disableBool=true;
+                else {
+                    obj.disableBool = true;
                 }
-                if(obj.disableBool) {
+                if (obj.disableBool) {
                     // _this.toggleClass("tr-bihu-active").siblings().removeClass("tr-bihu-active");
                     if (obj.modal && obj.modal.attr("trIndex") == _this.index())//点击的是同一行
                     {
@@ -649,7 +689,7 @@
                             width: obj.width,
                             init: obj.init.bind(this)
                         });
-                        obj.modal.attr("trIndex",_this.index());
+                        obj.modal.attr("trIndex", _this.index());
 
                         if (!obj.myScroll) {
                             obj.myScroll = new IScroll('#modal-body-bihu', {
@@ -657,7 +697,8 @@
                                 mouseWheel: true,
                                 interactiveScrollbars: true,
                                 shrinkScrollbars: 'scale',
-                                fadeScrollbars: true
+                                fadeScrollbars: true,
+                                preventDefault: false
                             });
                         }
                         obj.trClickInit.bind(this)(obj.myScroll);
@@ -679,8 +720,8 @@
                 headerTitle: "消息提示",//header 显示的提示内容标题
                 animateIndex: 3,
                 tableHeaderFixed: false,
-                setFixedHeader:function () { },
-                html: '<div id="myModal" class="myModal modal modal-bihu-dialog" data-easein="fadeInDown" data-easeout="fadeOutDown"  role="dialog" aria-labelledby="gridSystemModalLabel" style="z-index: 99999;">\
+                setFixedHeader: function () { },
+                html: '<div id="myModal" class="myModal modal modal-bihu-dialog animated" data-easein="fadeInDown" data-easeout="fadeOutDown"  role="dialog" aria-labelledby="gridSystemModalLabel" aria-hidden="true" style="z-index: 99999;">\
                 <div class="modal-dialog show-dialog-margin-top6" role="document">\
                     <div class="modal-content">\
                     <div class="modal-header modal-header-hieght">\
@@ -701,9 +742,18 @@
             obj = $.extend(defaults, obj);
             if ($("#myModal").length <= 0) {
                 $("body").append(obj.html);
+                $("#myModal").on("shown.bs.modal", function () {
+                    setTimeout(function () {
+                        obj.setFixedHeader();
+                    }, 0);
+                }).on("show.bs.modal", function () {
+                    $("body.modal-open-bihu").css("overflow", "hidden");
+                }).on("hidden.bs.modal", function () {
+                    $("body.modal-open-bihu").css("overflow", "auto");
+                });
             }
-            var _this=$(this);
-            if($.trim(_this.html()).length>0) {
+            var _this = $(this);
+            if ($.trim(_this.html()).length > 0) {
                 obj.content = _this.html();
                 _this.html("");
             }
@@ -720,27 +770,28 @@
                 form: $("#modal-form"),
                 containerFluid: $("#myModal").find(".container-fluid"),
                 tableResponsive: $("#myModal").find(".table-responsive"),
-                bihu_datatime:$("#myModal").find(".bihu-datatime"),
-                bihu_datatimeDay:$("#myModal").find(".bihu-datatime-day")
+                bihu_datatime: $("#myModal").find(".bihu-datatime"),
+                bihu_datatimeDay: $("#myModal").find(".bihu-datatime-day"),
+                bihu_datatimeHour: $("#myModal").find(".bihu-datatiem-hour"),
+                bihu_datatimeSlot: $("#myModal").find(".bihu-datatime-slot")
             };
             var initData = {
                 setDefault: function () {
-                    $("body.modal-open-bihu").css("overflow","hidden");
                     data.modalFooter.html("");
-                    if(obj.content) {
+                    if (obj.content) {
                         data.form.html("");
                     }
                     var that = this;
-                    if(obj.hideHeader){
+                    if (obj.hideHeader) {
                         data.header.hide();
                     }
-                     else{
+                    else {
                         data.header.show();
                     }
-                    if(!obj.buttons){
+                    if (!obj.buttons) {
                         data.modalFooter.hide();
                     }
-                    else{
+                    else {
                         data.modalFooter.show();
                     }
                     data.modalDialog.css({
@@ -749,7 +800,7 @@
                     data.modalBody.css({
                         height: obj.height
                     });
-                    if(obj.content) {
+                    if (obj.content) {
                         data.form.html(obj.content);
                     }
 
@@ -758,12 +809,12 @@
                     that.setTop();
                     that.setButtons();
                     that.setDateTime();
-                    obj.init.bind(data.myModal)();//初始化
-                    if(obj.tableHeaderFixed){
-                        data.containerFluid.css("overflow","visible");
+                    obj.init.bind(data.myModal)(initData.close);//初始化
+                    if (obj.tableHeaderFixed) {
+                        data.containerFluid.css("overflow", "visible");
                     }
                 },
-                setDateTime:function(){
+                setDateTime: function () {
                     if (data.bihu_datatime.length > 0) {
                         data.bihu_datatime.datetimepicker({
                             language: 'zh-CN',
@@ -774,18 +825,18 @@
                             todayBtn: 1,
                             clearBtn: 1
                         }).on("changeDate", function (e) {
-                            var _this=$(this);
-                            var type=_this.attr("bihu-type");
-                            var id=_this.attr("bihu-id");
-                            if(type=="start") {
-                                $("#"+id).datetimepicker("setStartDate", _this.val());
+                            var _this = $(this);
+                            var type = _this.attr("bihu-type");
+                            var id = _this.attr("bihu-id");
+                            if (type == "start") {
+                                $("#" + id).datetimepicker("setStartDate", _this.val());
                             }
-                            else if(type=="end"){
-                                $("#"+id).datetimepicker("setEndDate",  _this.val());
+                            else if (type == "end") {
+                                $("#" + id).datetimepicker("setEndDate", _this.val());
                             }
-                        }).on("hide",function(e){
-                            var _this=$(this);
-                            if(!$.trim(_this.val())) {
+                        }).on("hide", function (e) {
+                            var _this = $(this);
+                            if (!$.trim(_this.val())) {
                                 var type = _this.attr("bihu-type");
                                 var id = _this.attr("bihu-id");
                                 if (type == "start") {
@@ -809,14 +860,52 @@
                             clearBtn: 1
                         });
                     }
+                    if (data.bihu_datatimeHour.length > 0) {
+                        data.bihu_datatimeHour.datetimepicker({
+                            language: 'zh-CN',
+                            weekStart: 1,
+                            autoclose: true,
+                            forceParse: false,
+                            todayBtn: 1,
+                            clearBtn: 1,
+                            minView: 1,
+                            format: "yyyy-mm-dd hh:00"
+                        });
+                    }
+                    if (data.bihu_datatimeSlot.length > 0) {
+                        data.bihu_datatimeSlot.daterangepicker({
+                            applyClass: 'btn-sm btn-primary',
+                            cancelClass: 'btn-sm btn-default',
+                            clearClass: 'btn-sm btn-danger',
+                            locale: {
+                                applyLabel: '确认',
+                                cancelLabel: '取消',
+                                clearLabel: '清除',
+                                fromLabel: '起始时间',
+                                toLabel: '结束时间',
+                                customRangeLabel: '自定义',
+                                firstDay: 1
+                            },
+                            opens: 'right',    // 日期选择框的弹出位置
+                            separator: ' 至 ',
+                            showWeekNumbers: true,     // 是否显示第几周
+                            format: 'YYYY-MM-DD',
+                            isShowLabel: false
+                        }, function (start, end, label) { // 格式化日期显示框
+                            $('#beginTime').val(start.format('YYYY-MM-DD'));
+                            $('#endTime').val(end.format('YYYY-MM-DD'));
+                        }).next().on('click', function () {
+                            $(this).prev().focus();
+                        });
+                    }
                 },
-                setAnimate:function(){
-                    if(obj.animateIndex!=3 && obj.animateIndex>=0 && obj.animateIndex<=$.animate_tad.length-1) {
+                setAnimate: function () {
+                    if (obj.animateIndex != 3 && obj.animateIndex >= 0 && obj.animateIndex <= $.animate_tad.length - 1) {
                         data.myModal.attr("data-easein", $.animate_tad[obj.animateIndex].animateName1);
                         data.myModal.attr("data-easeout", $.animate_tad[obj.animateIndex].animateName2);
                     }
                 },
-                setButtons:function() {
+                setButtons: function () {
                     for (var btn in obj.buttons) {
                         var b = '<button type="button" id="' + btn + '" class="btn btn-primary"  autocomplete="off" data-loading-text="' + btn + '...">' + btn + '</button>';
                         data.modalFooter.append(b);
@@ -826,37 +915,38 @@
                             _this.html("");
                             obj.buttons[$(this).attr("id")].bind(data.myModal)($(this));
                             _this.html(obj.content);
-                            $("body.modal-open-bihu").css("overflow","auto");
                         });
                     }
-                    $(".close_bihu").on("click",function(e) {
+                    $(".close_bihu").on("click", function (e) {
                         e.stopPropagation();
                         _this.html(obj.content);
-                        $("body.modal-open-bihu").css("overflow","auto");
                         data.myModal.modal("hide");
                         return !1;
                     });
                 },
-                setTop:function() {
-                    if (obj.height == "auto") {
-                        obj.height = data.modalBody.height();
-                    }
-                    if (obj.height >= 600) {
-                        data.modalDialog.addClass("show-dialog-margin-top2");
-                    }
-                    else if (obj.height >= 550 && obj.height < 600) {
-                        data.modalDialog.addClass("show-dialog-margin-top3");
-                    }
-                    else if (obj.height >= 500 && obj.height < 550) {
-                        data.modalDialog.addClass("show-dialog-margin-top5");
-                    }
-                    else if (obj.height < 500 && obj.height > 400) {
-                        data.modalDialog.addClass("show-dialog-margin-top7");
-                    }
-                    else if (obj.height <= 400 && obj.height >= 300) {
-                        data.modalDialog.addClass("show-dialog-margin-top10");
-                    }
-
+                setTop: function () {
+                    // if (obj.height == "auto") {
+                    //     obj.height = data.modalBody.height();
+                    // }
+                    // if (obj.height >= 600) {
+                    //     data.modalDialog.addClass("show-dialog-margin-top2");
+                    // }
+                    // else if (obj.height >= 550 && obj.height < 600) {
+                    //     data.modalDialog.addClass("show-dialog-margin-top3");
+                    // }
+                    // else if (obj.height >= 500 && obj.height < 550) {
+                    //     data.modalDialog.addClass("show-dialog-margin-top5");
+                    // }
+                    // else if (obj.height < 500 && obj.height > 400) {
+                    //     data.modalDialog.addClass("show-dialog-margin-top7");
+                    // }
+                    // else if (obj.height <= 400 && obj.height >= 300) {
+                    //     data.modalDialog.addClass("show-dialog-margin-top10");
+                    // }
+                },
+                close: function () {
+                    _this.html(obj.content);
+                    data.myModal.modal("hide");
                 },
                 init: function () {
                     var that = this;
@@ -865,46 +955,41 @@
                         backdrop: false
                     });
                     initData.setDefault();
-                    if(obj.isIE) {
+                    if (obj.isIE) {
                         obj.fixed();
                     }
                 }
             };
             initData.setAnimate();
-            obj.isIE=false;
-            if(obj.tableHeaderFixed) {
-                var fixedObj = obj.setFixedHeader.bind(data.myModal)();
-                obj.isIE = fixedObj.isIE;
-                obj.fixed = fixedObj.fixed;
-            }
+            obj.isIE = false;
             initData.init();
-             return {
-                 close: function (callback) {
-                     if (callback && callback instanceof Function) {
-                     }
-                     _this.html(obj.content);
-                     data.myModal.modal("hide");
-                 }
-             };
+            return {
+                close: function (callback) {
+                    if (callback && callback instanceof Function) {
+                    }
+                    _this.html(obj.content);
+                    data.myModal.modal("hide");
+                }
+            };
         },
-        isCheckLicenseNo:function() {
+        isCheckLicenseNo: function () {
             var that = $(this);
             var reg = /^[\u4e00-\u9fa5]{1}[A-z]{1}[\da-zA-Z]{4,5}$/;
             return !reg.test($.trim(that.val()));
         },
-        isPhone:function() {//是否是座机
+        isPhone: function () {//是否是座机
             var that = $(this);
             var isPhone = /^([0-9]{3,4}-)?[0-9]{7,8}$/;
             return isPhone.test(that.val());
         },
-        isMob:function() {//是否是手机号
+        isMob: function () {//是否是手机号
             var that = $(this);
             var isMob = /^1\d{10}$/;
             return isMob.test(that.val());
         },
-        isNum:function(){//只能输入数字
-            var _this=$(this);
-            _this.on("keyup",function(e) {
+        isNum: function () {//只能输入数字
+            var _this = $(this);
+            _this.on("keyup", function (e) {
                 e.stopPropagation();
                 var that = $(this);
                 that.val(that.val().replace(/[^\d]/g, ''));
@@ -915,29 +1000,29 @@
             var reg = /^\d+(\.\d{2})?$/;
             return !reg.test(that.val());
         },
-        isCheckNumAndLetter:function() {//验证输入的是否是 数字  字母 数字+字母
+        isCheckNumAndLetter: function () {//验证输入的是否是 数字  字母 数字+字母
             var that = $(this);
             var v = that.val();
             // var reg=/^[A-Za-z0-9]+$/;
             var reg = /^[A-Za-z0-9\u4E00-\u9FA5]+$/;
             return reg.test(v);
         },
-        isCheckNumAndLetterAndSpecial:function(){//验证输入的是否是汉字
-            var reg=/[\u4E00-\u9FA5]/i;
-            var v=$(this).val();
+        isCheckNumAndLetterAndSpecial: function () {//验证输入的是否是汉字
+            var reg = /[\u4E00-\u9FA5]/i;
+            var v = $(this).val();
             return reg.test(v);
         },
-        bihuDialog:function(obj){
+        bihuDialog: function (obj) {
             var defaults = {
                 animateIndex: 3
             };
             obj = $.extend(defaults, obj);
-            var _thisDialog=this;
+            var _thisDialog = this;
             var initData = {
                 setDefault: function () {
                 },
-                setAnimate:function(){
-                    if(obj.animateIndex!=3 && obj.animateIndex>=0 && obj.animateIndex<=$.animate_tad.length-1) {
+                setAnimate: function () {
+                    if (obj.animateIndex != 3 && obj.animateIndex >= 0 && obj.animateIndex <= $.animate_tad.length - 1) {
                         _thisDialog.attr("data-easein", $.animate_tad[obj.animateIndex].animateName1);
                         _thisDialog.attr("data-easeout", $.animate_tad[obj.animateIndex].animateName2);
                     }
@@ -945,10 +1030,10 @@
                 init: function () {
                     var that = this;
                     that.setDefault();
-                    _thisDialog.addClass("myModal").prop("data-easein","fadeInDown").prop("data-easeout","fadeOutDown")
-                        .prop("role","dialog").prop("aria-labelledby","gridSystemModalLabel").css({
-                        "z-index":999999
-                    });
+                    _thisDialog.addClass("myModal").prop("data-easein", "fadeInDown").prop("data-easeout", "fadeOutDown")
+                        .prop("role", "dialog").prop("aria-labelledby", "gridSystemModalLabel").css({
+                            "z-index": 999999
+                        });
                     that.setAnimate();
                     _thisDialog.modal({
                         show: true,
@@ -967,17 +1052,17 @@
             };
         }
     });
-})(jQuery,document);
-(function($) {
+})(jQuery, document);
+(function ($) {
     $.fn.fixedHeader = function (options) {
         var config = {
             topOffset: 0,
             leftOffset: 0
             //bgColor: 'white'
         };
-        if (options){ $.extend(config, options); }
+        if (options) { $.extend(config, options); }
 
-        return this.each( function() {
+        return this.each(function () {
             var o = $(this);
 
             var $win = $(window)
@@ -1001,7 +1086,7 @@
                 // isFixed ? $('thead.header-copy', o).show().offset({ left: $head.offset().left })
                 //     : $('thead.header-copy', o).hide();
 
-                $('thead.header-copy', o).show().offset({ left: config.leftOffset })
+                $('thead.header-copy', o).show();//.offset({ left: config.leftOffset })
                 // NG: dislocate while iframe page resized. fixed by jeffen@pactera 2015/7/8
                 headerCopyRectify();
             }
@@ -1013,23 +1098,139 @@
                 });
             }
 
-            //$win.on('scroll', processScroll);
-            // NG: dislocate while body resized. fixed by jeffen@pactera 2015/7/9
-            //$win.on('resize', processScroll);
-
-            // hack sad times - holdover until rewrite for 2.1
-            // $head.on('click', function () {
-            //     if (!isFixed) setTimeout(function () {  $win.scrollTop($win.scrollTop() - 47) }, 10);
-            // });
-            $head.clone(true).removeClass('header').addClass('header-copy header-fixed').css({'position': 'fixed', 'top':config.topOffset}).appendTo(o);
-            o.find('thead.header-copy').offset({ left: config.leftOffset }).css({
-                "top":config.topOffset
-            }).width($head.width()).attr("id","AgentSelectTable_header1");
+            $head.clone(true).removeClass('header').addClass('header-copy header-fixed').css({ 'position': 'absolute', 'top': config.topOffset }).appendTo(o);
+            // o.find('thead.header-copy').offset({ left: config.leftOffset }).css({
+            //     "top":config.topOffset
+            // }).width($head.width()).attr("id","AgentSelectTable_header1");
+            o.find('thead.header-copy').css({
+                "top": config.topOffset
+            }).width($head.width()).attr("id", "AgentSelectTable_header1");
             headerCopyRectify();
-            $head.css({ margin:'0 auto',
+            $head.css({
+                margin: '0 auto',
                 width: o.width(),
-                'background-color':config.bgColor });
+                'background-color': config.bgColor
+            });
             processScroll();
         });
     };
+})(jQuery);
+//input placeholder兼容
+!(function ($, doc, win) {
+    $.fn.placeholder = function () {
+        var i = doc.createElement('input'),
+            placeholdersupport = 'placeholder' in i;
+        if (!placeholdersupport) {
+            var inputs = $(this);
+            inputs.each(function () {
+                var input = $(this),
+                    text = input.attr('placeholder'),
+                    pdl = 0,
+                    height = input.outerHeight(),
+                    width = input.outerWidth(),
+                    placeholder = $('<span class="phTips_tadllj">' + text + '</span>');
+                try {
+                    pdl = input.css('padding-left').match(/\d*/i)[0] * 1;
+                } catch (e) {
+                    pdl = 5;
+                }
+                placeholder.css({ 'margin-left': -(width - pdl), 'height': height, 'line-height': height + "px", 'position': 'absolute', 'color': "#999", 'font-size': "14px", "z-index": "100" });
+                placeholder.click(function () {
+                    //placeholder.css({display:'none'});
+                    input.focus();
+                });
+                if ($.trim(input.val()).length > 0) {
+                    placeholder.css({ display: 'none' });
+                } else {
+                    placeholder.css({ display: 'inline' });
+                }
+                placeholder.insertAfter(input);
+                input.on("focus", function (e) {
+                    placeholder.css({ display: 'none' });
+                }).on("blur", function (e) {
+                    var _this = $(this);
+                    if ($.trim(_this.val()).length > 0) {
+                        placeholder.css({ display: 'none' });
+                    }
+                    else {
+                        placeholder.css({ display: 'inline' });
+                    }
+                });
+                // .keyup(function(e){
+                //     if($(this).val() != ""){
+                //         placeholder.css({display:'none'});
+                //     }else{
+                //         placeholder.css({display:'inline'});
+                //     }
+                // })
+            });
+        }
+        return this;
+    };
+    var isIe = false;
+    if (navigator.userAgent.indexOf("MSIE") > 0) {
+        if (!$.support.leadingWhitespace || navigator.userAgent.indexOf("MSIE 9.0") > 0) {//IE9以下不让登陆
+            isIe = true;
+        }
+    }
+    if (isIe) {
+        $('input[placeholder]').placeholder();
+    }
+})(jQuery, document, window);
+
+(function ($) {
+    $.formatDate = function (pattern, date) {
+        //如果不设置，默认为当前时间  
+        if (!date) date = new Date();
+        if (typeof (date) === "string") {
+            var parden = /\/Date\((\d+).*?\)\//;
+            if (parden.test(date)) {
+                date = eval(date.replace(/\/Date\((\d+).*?\)\//gi, "new Date($1)"));
+            } else
+                date = new Date(date.replace(/-/g, "/"));
+        }
+        /*补00*/
+        var toFixedWidth = function (value) {
+            var result = 100 + value;
+            return result.toString().substring(1);
+        };
+
+        /*配置*/
+        var options = {
+            regeExp: /(yyyy|M+|d+|h+|m+|s+|ee+|ws?|p)/g,
+            months: ['January', 'February', 'March', 'April', 'May',
+                     'June', 'July', 'August', 'September',
+                      'October', 'November', 'December'],
+            weeks: ['Sunday', 'Monday', 'Tuesday',
+                    'Wednesday', 'Thursday', 'Friday',
+                        'Saturday']
+        };
+
+        /*时间切换*/
+        var swithHours = function (hours) {
+            return hours < 12 ? "AM" : "PM";
+        };
+
+        /*配置值*/
+        var pattrnValue = {
+            "yyyy": date.getFullYear(),                      //年份  
+            "MM": toFixedWidth(date.getMonth() + 1),           //月份  
+            "dd": toFixedWidth(date.getDate()),              //日期  
+            "hh": toFixedWidth(date.getHours()),             //小时  
+            "mm": toFixedWidth(date.getMinutes()),           //分钟  
+            "ss": toFixedWidth(date.getSeconds()),           //秒  
+            "ee": options.months[date.getMonth()],           //月份名称  
+            "ws": options.weeks[date.getDay()],              //星期名称  
+            "M": date.getMonth() + 1,
+            "d": date.getDate(),
+            "h": date.getHours(),
+            "m": date.getMinutes(),
+            "s": date.getSeconds(),
+            "p": swithHours(date.getHours())
+        };
+        return pattern.replace(options.regeExp, function () {
+            return pattrnValue[arguments[0]];
+        });
+    };
+
 })(jQuery);
